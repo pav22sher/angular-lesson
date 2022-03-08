@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <lesson1-app></lesson1-app>
     <lesson2-app></lesson2-app>
     <lesson3-app></lesson3-app>
+    <lesson4-app></lesson4-app>
   `
 })
 export class AppComponent {

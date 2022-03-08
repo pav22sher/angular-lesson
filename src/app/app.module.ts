@@ -10,6 +10,8 @@ import {Lesson1Component} from "./lesson1/lesson1.component";
 import {Lesson2Component} from "./lesson2/lesson2.component";
 import {Lesson3Component1} from "./lesson3/lesson3.component1";
 import {Lesson3Component2} from "./lesson3/lesson3.component2";
+import {Lesson4Component1} from "./lesson4/lesson4.component1";
+import {Lesson4Component2} from "./lesson4/lesson4.component2";
 
 //Декоратор @NgModule с методанными
 @NgModule({
@@ -21,7 +23,9 @@ import {Lesson3Component2} from "./lesson3/lesson3.component2";
     Lesson1Component,
     Lesson2Component,
     Lesson3Component1,
-    Lesson3Component2
+    Lesson3Component2,
+    Lesson4Component1,
+    Lesson4Component2,
   ],
   //классы которые необходимы для представлений текущего модуля
   imports: [BrowserModule, FormsModule],
