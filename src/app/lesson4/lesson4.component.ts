@@ -2,17 +2,14 @@ import { Component } from '@angular/core';
 
 //Передача html и данных в дочерний компонент
 @Component({
-  selector: 'lesson3-app',
+  selector: 'lesson4-app',
   template: `
-    <child-lesson3-app
-      [userName]="userName"
-      [userAge]="userAge"
-    >
-      <h2>Добро пожаловать {{ name }}!</h2>
-    </child-lesson3-app>
+    <child-lesson4-app #counter></child-lesson4-app>
+    <button (click)="counter.increment()">+</button>
+    <button (click)="counter.decrement()">-</button>
   `,
 })
-export class Lesson3Component1 {
+export class Lesson4Component {
   name = 'Даня'
   userName: string = 'Tom'
   userAge: number = 24

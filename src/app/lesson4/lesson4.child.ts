@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
     <p>{{ counter }}</p>
   `,
 })
-export class Lesson4Component2 {
+export class Lesson4Child {
   counter: number = 0
   increment() {
     this.counter++

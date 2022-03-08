@@ -9,7 +9,7 @@ import {Component, Input} from '@angular/core';
     <p>Возраст пользователя: {{ userAge }}</p>
   `,
 })
-export class Lesson3Component2 {
+export class Lesson3Child {
   name: string = 'Евгений'
   //переменные из родительского компонента
   @Input() userName: string

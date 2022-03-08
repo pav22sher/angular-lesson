@@ -1,17 +1,15 @@
 //Библиотеки устанавливаются через пакетный менеджер npm
 //Имя каждой библиотеки Angular начинается с префикса @angular
-import { NgModule } from '@angular/core' //Для создания модуля
-import { BrowserModule } from '@angular/platform-browser' //Для работы с браузером
-import { FormsModule } from '@angular/forms' //Для работы с формами
+import {NgModule} from '@angular/core' //Для создания модуля
+import {BrowserModule} from '@angular/platform-browser' //Для работы с браузером
+import {FormsModule} from '@angular/forms' //Для работы с формами
 
 //Компоненты
-import { AppComponent } from './app.component' //Корневой компонент приложения
-import {Lesson1Component} from "./lesson1/lesson1.component";
-import {Lesson2Component} from "./lesson2/lesson2.component";
-import {Lesson3Component1} from "./lesson3/lesson3.component1";
-import {Lesson3Component2} from "./lesson3/lesson3.component2";
-import {Lesson4Component1} from "./lesson4/lesson4.component1";
-import {Lesson4Component2} from "./lesson4/lesson4.component2";
+import {AppComponent} from './app.component' //Корневой компонент приложения
+import {Lesson1Module} from "./lesson1/lesson1.module";
+import {Lesson2Module} from "./lesson2/lesson2.module";
+import {Lesson3Module} from "./lesson3/lesson3.module";
+import {Lesson4Module} from "./lesson4/lesson4.module";
 
 //Декоратор @NgModule с методанными
 @NgModule({
@@ -19,17 +17,17 @@ import {Lesson4Component2} from "./lesson4/lesson4.component2";
   bootstrap: [AppComponent],
   //классы представлений, которые принадлежат модулю
   declarations: [
-    AppComponent,
-    Lesson1Component,
-    Lesson2Component,
-    Lesson3Component1,
-    Lesson3Component2,
-    Lesson4Component1,
-    Lesson4Component2,
+    AppComponent
   ],
   //классы которые необходимы для представлений текущего модуля
-  imports: [BrowserModule, FormsModule],
-  exports: [],
-  providers: []
+  imports: [
+    BrowserModule,
+    FormsModule,
+    Lesson1Module,
+    Lesson2Module,
+    Lesson3Module,
+    Lesson4Module
+  ]
 })
-export class AppModule { }
+export class AppModule {
+}
