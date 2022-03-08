@@ -4,20 +4,23 @@ import { NgModule } from '@angular/core' //Для создания модуля
 import { BrowserModule } from '@angular/platform-browser' //Для работы с браузером
 import { FormsModule } from '@angular/forms' //Для работы с формами
 
-import {AppLesson1Module} from "./lesson1/app.lesson1.module";
-import {AppLesson2Module} from "./lesson2/app.lesson2.module";
-
-//Корневой компонент приложения
-import { AppComponent } from './app.component'
+//Компоненты
+import { AppComponent } from './app.component' //Корневой компонент приложения
+import {Lesson1Component} from "./lesson1/lesson1.component";
+import {Lesson2Component} from "./lesson2/lesson2.component";
 
 //Декоратор @NgModule с методанными
 @NgModule({
   //корневой компонент, который вызывается по умолчанию при загрузке приложения
   bootstrap: [AppComponent],
   //классы представлений, которые принадлежат модулю
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    Lesson1Component,
+    Lesson2Component
+  ],
   //классы которые необходимы для представлений текущего модуля
-  imports: [BrowserModule, FormsModule, AppLesson1Module, AppLesson2Module],
+  imports: [BrowserModule, FormsModule],
   exports: [],
   providers: []
 })

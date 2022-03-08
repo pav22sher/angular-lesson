@@ -14,9 +14,9 @@ class Item {
 
 @Component({
   selector: 'lesson2-app',
-  templateUrl: './app.lesson2.component.html'
+  templateUrl: './lesson2.component.html'
 })
-export class AppLesson2Component {
+export class Lesson2Component {
   purchase : string
   price : number
   items: Item[] = [
