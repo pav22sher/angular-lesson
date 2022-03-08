@@ -13,63 +13,8 @@ class Item {
 }
 
 @Component({
-  selector: 'purchase-app',
-  template: `
-    <div class="page-header">
-      <h1>Список покупок</h1>
-    </div>
-    <div class="panel">
-      <div class="form-inline">
-        <div class="form-group">
-          <div class="col-md-8">
-            <input
-              class="form-control"
-              [(ngModel)]="purchase"
-              placeholder="Название"
-            />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-md-6">
-            <input
-              type="number"
-              class="form-control"
-              [(ngModel)]="price"
-              placeholder="Цена"
-            />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-            <button class="btn btn-default" (click)="addItem(purchase, price)">
-              Добавить
-            </button>
-          </div>
-        </div>
-      </div>
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th>Предмет</th>
-          <th>Цена</th>
-          <th>Куплено</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of items">
-          <td>{{ item.purchase }}</td>
-          <td>{{ item.price }}</td>
-          <td>
-            <input
-              type="checkbox"
-              [(ngModel)]="item.done"
-            />
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  `
+  selector: 'lesson2-app',
+  templateUrl: './app.lesson2.component.html'
 })
 export class AppLesson2Component {
   purchase : string
