@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms' //Для работы с форма
 import { AppComponent } from './app.component' //Корневой компонент приложения
 import {Lesson1Component} from "./lesson1/lesson1.component";
 import {Lesson2Component} from "./lesson2/lesson2.component";
+import {Lesson3Component1} from "./lesson3/lesson3.component1";
+import {Lesson3Component2} from "./lesson3/lesson3.component2";
 
 //Декоратор @NgModule с методанными
 @NgModule({
@@ -17,7 +19,9 @@ import {Lesson2Component} from "./lesson2/lesson2.component";
   declarations: [
     AppComponent,
     Lesson1Component,
-    Lesson2Component
+    Lesson2Component,
+    Lesson3Component1,
+    Lesson3Component2
   ],
   //классы которые необходимы для представлений текущего модуля
   imports: [BrowserModule, FormsModule],
