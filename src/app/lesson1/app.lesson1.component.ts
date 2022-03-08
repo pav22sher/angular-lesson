@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
     <h1>Добро пожаловать {{ name }}!</h1>
   `
 })
-export class AppComponent {
+export class AppLesson1Component {
   name = ''
 }
