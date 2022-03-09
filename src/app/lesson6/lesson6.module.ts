@@ -2,16 +2,14 @@ import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {FormsModule} from '@angular/forms'
 
-import {Lesson5Component} from "./lesson5.component";
-import {BoldDirective} from "./bold.directive";
+import {Lesson6Component} from "./lesson6.component";
 
 @NgModule({
   declarations: [
-    Lesson5Component,
-    BoldDirective
+    Lesson6Component
   ],
   imports: [BrowserModule, FormsModule],
-  exports: [Lesson5Component, BoldDirective]
+  exports: [Lesson6Component]
 })
-export class Lesson5Module {
+export class Lesson6Module {
 }
