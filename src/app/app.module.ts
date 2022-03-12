@@ -3,9 +3,14 @@
 import {NgModule} from '@angular/core' //Для создания модуля
 import {BrowserModule} from '@angular/platform-browser' //Для работы с браузером
 import {FormsModule} from '@angular/forms' //Для работы с формами
+import {RouterModule, Routes} from "@angular/router";
 
 //Компоненты
 import {AppComponent} from './app.component' //Корневой компонент приложения
+import {HomeComponent} from "./home.component";
+import {AboutComponent} from "./about.component";
+import {NotFoundComponent} from "./not-found.component";
+
 import {Lesson1Module} from "./lesson1/lesson1.module";
 import {Lesson2Module} from "./lesson2/lesson2.module";
 import {Lesson3Module} from "./lesson3/lesson3.module";
@@ -19,18 +24,25 @@ import {Lesson10Module} from "./lesson10/lesson10.module";
 import {Lesson11Module} from "./lesson11/lesson11.module";
 import {Lesson12Module} from "./lesson12/lesson12.module";
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '**', component: NotFoundComponent },
+]
+
 //Декоратор @NgModule с методанными
 @NgModule({
   //корневой компонент, который вызывается по умолчанию при загрузке приложения
   bootstrap: [AppComponent],
   //классы представлений, которые принадлежат модулю
   declarations: [
-    AppComponent
+    AppComponent, HomeComponent, AboutComponent, NotFoundComponent
   ],
   //классы которые необходимы для представлений текущего модуля
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
     Lesson1Module,
     Lesson2Module,
     Lesson3Module,
