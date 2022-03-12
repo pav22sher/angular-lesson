@@ -15,6 +15,7 @@ import {Lesson6Module} from "./lesson6/lesson6.module";
 import {Lesson7Module} from "./lesson7/lesson7.module";
 import {Lesson8Module} from "./lesson8/lesson8.module";
 import {Lesson9Module} from "./lesson9/lesson9.module";
+import {Lesson10Module} from "./lesson10/lesson10.module";
 
 //Декоратор @NgModule с методанными
 @NgModule({
@@ -37,6 +38,7 @@ import {Lesson9Module} from "./lesson9/lesson9.module";
     Lesson7Module,
     Lesson8Module,
     Lesson9Module,
+    Lesson10Module,
   ]
 })
 export class AppModule {
