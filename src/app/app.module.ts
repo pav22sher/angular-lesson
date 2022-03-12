@@ -4,29 +4,20 @@ import {NgModule} from '@angular/core' //Для создания модуля
 import {BrowserModule} from '@angular/platform-browser' //Для работы с браузером
 import {FormsModule} from '@angular/forms' //Для работы с формами
 import {RouterModule, Routes} from "@angular/router";
+//Друнгие модули
+import {LessonModule} from "./lesson/lesson.module";
 
 //Компоненты
 import {AppComponent} from './app.component' //Корневой компонент приложения
 import {HomeComponent} from "./home.component";
 import {AboutComponent} from "./about.component";
+import {LessonComponent} from "./lesson/lesson.component";
 import {NotFoundComponent} from "./not-found.component";
-
-import {Lesson1Module} from "./lesson1/lesson1.module";
-import {Lesson2Module} from "./lesson2/lesson2.module";
-import {Lesson3Module} from "./lesson3/lesson3.module";
-import {Lesson4Module} from "./lesson4/lesson4.module";
-import {Lesson5Module} from "./lesson5/lesson5.module";
-import {Lesson6Module} from "./lesson6/lesson6.module";
-import {Lesson7Module} from "./lesson7/lesson7.module";
-import {Lesson8Module} from "./lesson8/lesson8.module";
-import {Lesson9Module} from "./lesson9/lesson9.module";
-import {Lesson10Module} from "./lesson10/lesson10.module";
-import {Lesson11Module} from "./lesson11/lesson11.module";
-import {Lesson12Module} from "./lesson12/lesson12.module";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'lesson', component: LessonComponent },
   { path: '**', component: NotFoundComponent },
 ]
 
@@ -36,25 +27,17 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent],
   //классы представлений, которые принадлежат модулю
   declarations: [
-    AppComponent, HomeComponent, AboutComponent, NotFoundComponent
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   //классы которые необходимы для представлений текущего модуля
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    Lesson1Module,
-    Lesson2Module,
-    Lesson3Module,
-    Lesson4Module,
-    Lesson5Module,
-    Lesson6Module,
-    Lesson7Module,
-    Lesson8Module,
-    Lesson9Module,
-    Lesson10Module,
-    Lesson11Module,
-    Lesson12Module,
+    LessonModule,
   ]
 })
 export class AppModule {
