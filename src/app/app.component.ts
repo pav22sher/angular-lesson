@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
     <!-- <lesson4-app></lesson4-app> -->
     <!-- <lesson5-app></lesson5-app> -->
     <!-- <lesson6-app></lesson6-app> -->
-    <lesson7-app></lesson7-app>
+    <!--<lesson7-app></lesson7-app>-->
+    <!--<lesson8-app></lesson8-app>-->
+    <lesson9-app></lesson9-app>
   `
 })
 export class AppComponent {
