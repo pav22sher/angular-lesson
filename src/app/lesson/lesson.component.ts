@@ -43,6 +43,9 @@ import { Component } from '@angular/core';
           <li class="nav-item">
             <a routerLink="/lesson/lesson12" class="nav-link active">Урок 12</a>
           </li>
+          <li class="nav-item">
+            <a routerLink="/lesson/lesson13" class="nav-link active">Урок 13</a>
+          </li>
         </ul>
         <router-outlet></router-outlet>
       </div>
